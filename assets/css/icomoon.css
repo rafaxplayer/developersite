@@ -1,0 +1,113 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?vhz8c6');
+  src:  url('../fonts/icomoon.eot?vhz8c6#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?vhz8c6') format('truetype'),
+    url('../fonts/icomoon.woff?vhz8c6') format('woff'),
+    url('../fonts/icomoon.svg?vhz8c6#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-envelope-o:before {
+  content: "\f003";
+}
+.icon-envelope:before {
+  content: "\f0e0";
+}
+.icon-pinterest-square:before {
+  content: "\f0d3";
+}
+.icon-github:before {
+  content: "\eab0";
+}
+.icon-play:before {
+  content: "\e912";
+}
+.icon-folder-open:before {
+  content: "\e930";
+}
+.icon-price-tags:before {
+  content: "\e936";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-location:before {
+  content: "\e947";
+}
+.icon-search:before {
+  content: "\e986";
+}
+.icon-google-plus2:before {
+  content: "\ea8c";
+}
+.icon-facebook2:before {
+  content: "\ea91";
+}
+.icon-instagram:before {
+  content: "\ea92";
+}
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-linkedin:before {
+  content: "\eac9";
+}
+.icon-chevron-down:before {
+  content: "\e907";
+}
+.icon-chevron-left:before {
+  content: "\e908";
+}
+.icon-chevron-right:before {
+  content: "\e909";
+}
+.icon-chevron-small-down:before {
+  content: "\e90a";
+}
+.icon-chevron-up:before {
+  content: "\e90b";
+}
+.icon-dots-three-vertical:before {
+  content: "\e905";
+}
+.icon-cross:before {
+  content: "\e900";
+}
+.icon-menu:before {
+  content: "\e906";
+}
+.icon-text:before {
+  content: "\e901";
+}
+.icon-tags:before {
+  content: "\e902";
+}
+.icon-tag:before {
+  content: "\e903";
+}
+.icon-comment:before {
+  content: "\e904";
+}

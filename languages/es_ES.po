@@ -1,0 +1,388 @@
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Project-Id-Version: Developer&Site\n"
+"POT-Creation-Date: 2018-01-09 00:02+0100\n"
+"PO-Revision-Date: 2018-01-09 10:33+0100\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.0.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Last-Translator: \n"
+"Language: es_ES\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: 404.php:9
+msgid "Sorry, Page not found!"
+msgstr "Perdon , No se encontró la pagina!"
+
+#: 404.php:11
+msgid "Return home?"
+msgstr "Volver al inicio?"
+
+#: archive.php:7
+msgid "Archives"
+msgstr "Archivos"
+
+#: author.php:9
+msgid "Author Archives for "
+msgstr "Archivos del autor "
+
+#: author.php:15
+msgid "About "
+msgstr "Acerca de "
+
+#: author.php:42
+msgid "Published by"
+msgstr "Publicada por"
+
+#: author.php:43
+msgid "Leave your thoughts"
+msgstr "Deja tus comentarios"
+
+#: author.php:43
+msgid "1 Comment"
+msgstr "1 Comentario"
+
+#: author.php:43
+msgid "% Comments"
+msgstr "% Comentarios"
+
+#: author.php:62 page.php:49 single.php:75 template-about.php:36
+#: template-contact.php:148 template-parts/post-none.php:5
+msgid "Sorry, nothing to display."
+msgstr "Disculpenos, No existe el Articulo."
+
+#: category.php:7
+msgid "<span class=\"icon-folder-open\"></span> Categories for "
+msgstr ""
+
+#. translators: 1: title.
+#: comments.php:35
+#, php-format
+msgctxt "icon"
+msgid "%s One thought"
+msgstr "%s un pensamiento"
+
+#. translators: 1: comment count number, 2: title.
+#: comments.php:39
+#, php-format
+msgctxt "icon"
+msgid "%2$s %1$s thought"
+msgid_plural "%2$s %1$s thoughts"
+msgstr[0] "%2$s %1$s un pensamiento"
+msgstr[1] "%2$s %1$s pensamientos"
+
+#: comments.php:60
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: functions.php:53
+msgid "Use template-about for page about"
+msgstr "Utilice template-about para su pagina de acerca de"
+
+#: functions.php:58
+msgid ""
+"Use template-contact for page contact and set settings in admin panel "
+"developersite Options"
+msgstr ""
+"Utilice template-contact para pagina de contacto y configúrela en el panel "
+"de administración"
+
+#: functions.php:79
+msgid "Primary Navigation"
+msgstr "Navegación Principal"
+
+#: functions.php:253
+msgid "Principal Menu"
+msgstr "Menú Principal"
+
+#: functions.php:299
+msgid "Widget Area 1"
+msgstr "Area de widget 1"
+
+#: functions.php:300
+msgid "Description for this widget-area..."
+msgstr "Descripción para esta área widget..."
+
+#. translators: %s: Name of current post
+#: functions.php:329 template-parts/partials/related-posts.php:45
+msgid "READ MORE"
+msgstr "LEER MÁS"
+
+#: inc/admin-page/adminpage-settings-template-contact.php:2
+msgid "Contact Template Settings"
+msgstr "Plantilla de Contacto ajustes"
+
+#: inc/admin-page/adminpage-settings-template-contact.php:3
+msgid "Address Settings"
+msgstr "Dirección ajustes"
+
+#: inc/admin-page/adminpage-settings-template-contact.php:7
+msgid "Enter your address data"
+msgstr "Introduce los datos de tu dirección"
+
+#: inc/admin-page/adminpage-settings-template-contact.php:28
+msgid ""
+"Set email for contact form, by default the administrator email will be used"
+msgstr ""
+"Establece email para el formulario de contacto, por defecto se usara el "
+"del administrador"
+
+#: inc/admin-page/adminpage-settings-template-contact.php:32
+msgid "Maps Settings"
+msgstr "Ajustes de Maps"
+
+#: inc/admin-page/adminpage-settings-template-contact.php:33
+msgid "Enter your Google Maps data"
+msgstr "Introduce datos para Google Maps"
+
+#: inc/admin-page/adminpage-settings-template-contact.php:39
+msgid "Show/Hidde map on template contact"
+msgstr "Mostrar/Ocultar mapa en la plantilla de contacto"
+
+#: inc/admin-page/adminpage-settings.php:2
+msgid "Dev&Site Theme Options"
+msgstr "Dev&Site Opciones del Tema"
+
+#: inc/admin-page/adminpage-settings.php:7
+msgid "Footer Settings"
+msgstr "Pie de Página ajustes"
+
+#: inc/admin-page/adminpage-settings.php:8
+msgid "Enter your copiright text for footer data"
+msgstr "Introduce texto copyright para el pie de pagina"
+
+#: inc/admin-page/adminpage-settings.php:11
+#: inc/admin-page/adminpage-settings.php:12
+msgid "Footer text"
+msgstr "Pie de Pagina texto"
+
+#: inc/customizer/blog-customizer.php:4
+msgid "Blog Custom"
+msgstr "Personalizar Blog"
+
+#: inc/customizer/blog-customizer.php:6
+msgid "Customize blog entries words and others"
+msgstr "Personalice las frases de las entradas del blog y otros"
+
+#: inc/customizer/blog-customizer.php:12
+msgid "Blog"
+msgstr "Blog"
+
+#: inc/customizer/blog-customizer.php:18
+msgid "Blog title"
+msgstr "Título de Blog"
+
+#: inc/customizer/blog-customizer.php:21
+msgid "Set Blog custom title"
+msgstr "Personaliza el titulo del blog"
+
+#: inc/customizer/blog-customizer.php:41
+msgid "Post Excerpt Lenght"
+msgstr "Longitud del extracto de las entradas"
+
+#: inc/customizer/blog-customizer.php:44
+msgid "Set post excerpt lenght"
+msgstr "Establece longitud extracto de las entradas"
+
+#: inc/customizer/blog-customizer.php:50
+msgid "40 (default)"
+msgstr "40(por defecto)"
+
+#: inc/customizer/blog-customizer.php:56
+msgid "All Content"
+msgstr "Todo el contenido"
+
+#: inc/customizer/blog-customizer.php:73
+msgid "Related Posts Show/Hidde"
+msgstr "Mostrar/ocultar Entradas Relacionadas"
+
+#: inc/customizer/blog-customizer.php:76
+msgid "Show/Hidde Related posts section on posts details"
+msgstr ""
+"Mostrar/Ocultar la sección Entradas Relacionadas en la entrada detalle"
+
+#: inc/customizer/customizer.php:43
+msgid "Avatar"
+msgstr "Avartar"
+
+#: inc/customizer/customizer.php:46
+msgid "Set personal avatar for admintrator site"
+msgstr "Establece avatar personal del administrador del sitio"
+
+#: inc/customizer/menu-social-customizer.php:4
+msgid "Social Menu"
+msgstr "Menú Social"
+
+#: inc/customizer/menu-social-customizer.php:6
+msgid "Set Menu Social icons. To delete icon leave empty fields"
+msgstr ""
+"Establece iconos para el menú social, Para eliminar el icono deja en "
+"blanco los campos"
+
+#: inc/customizer/menu-social-customizer.php:19
+msgid "Menu Social Show/Hidde"
+msgstr "Mostrar/Ocultar Menú Social"
+
+#: inc/customizer/menu-social-customizer.php:34
+#: inc/customizer/menu-social-customizer.php:49
+#: inc/customizer/menu-social-customizer.php:64
+#: inc/customizer/menu-social-customizer.php:79
+#: inc/customizer/menu-social-customizer.php:94
+#: inc/customizer/menu-social-customizer.php:109
+#: inc/customizer/menu-social-customizer.php:124
+#: inc/customizer/menu-social-customizer.php:139
+#, php-format
+msgid "Your %s URL"
+msgstr "Tu %s URL"
+
+#: inc/customizer/theme-colors-customizer.php:4
+msgid "Theme Colors"
+msgstr "Colores del Tema"
+
+#: inc/customizer/theme-colors-customizer.php:6
+msgid "Set theme colors"
+msgstr "Establece colores para el Tema"
+
+#: inc/customizer/theme-colors-customizer.php:17
+msgid "Header Back Color"
+msgstr "Cabecera color de fondo"
+
+#: inc/customizer/theme-colors-customizer.php:20
+msgid "Set first sidebar section color background"
+msgstr "Establece color de fondo para la primera sección de la barra lateral"
+
+#: inc/customizer/theme-colors-customizer.php:37
+msgid "Menu Social Back Color"
+msgstr "Color de fondo Menú Social"
+
+#: inc/customizer/theme-colors-customizer.php:40
+msgid "Set menu social background color"
+msgstr "Establece color de fondo del menú social"
+
+#: inc/customizer/theme-colors-customizer.php:58
+msgid "Sidebar Back Color"
+msgstr "Barra lateral color de fondo"
+
+#: inc/customizer/theme-colors-customizer.php:61
+msgid "Set widgets bar and main menu background color"
+msgstr "Establecer color de fondo para la widgets bar y menú principal"
+
+#: inc/customizer/theme-colors-customizer.php:78
+msgid "Links Color"
+msgstr "Color de los enlaces"
+
+#: inc/customizer/theme-colors-customizer.php:81
+msgid "Set all links color"
+msgstr "Establece color para todos los enlaces"
+
+#: inc/customizer/theme-colors-customizer.php:92
+msgid "Titles Color"
+msgstr "Color de los títulos"
+
+#: inc/customizer/theme-colors-customizer.php:95
+msgid "Set all titles color"
+msgstr "Establece color para todos los titulos"
+
+#: inc/default-menus/menu-header.php:4
+msgid "home"
+msgstr "inicio"
+
+#: page.php:35 single.php:48 template-about.php:23 template-contact.php:136
+#: template-parts/post-content.php:35
+msgid "Edit"
+msgstr "Editar"
+
+#: search.php:7
+#, php-format
+msgid "<span class=\"icon-search\"></span>  %s Search Results for "
+msgstr "<span class=\"icon-search\"></span>  %s Resultados de búsqueda para "
+
+#: searchform.php:3 searchform.php:4
+msgid "Search"
+msgstr "Buscar"
+
+#: single.php:34
+msgid "/ Published by "
+msgstr "/Publicado por "
+
+#: single.php:52
+msgid "Share on :"
+msgstr "Compartir en :"
+
+#: tag.php:7
+msgid "<span class=\"icon-tags\"></span> Tag Archive: "
+msgstr "<span class=\"icon-tags\"></span> Etiqueta Archivo: "
+
+#: template-contact.php:106
+msgid "* Enter your name"
+msgstr "* Introduce tu nombre"
+
+#: template-contact.php:110
+msgid "* Enter your email"
+msgstr "* Introduce tu email"
+
+#: template-contact.php:114
+msgid "* Enter your message"
+msgstr "* Introduce tu mensaje"
+
+#: template-contact.php:118
+msgid "Send Message"
+msgstr "Enviar mensaje"
+
+#: template-parts/pagination-page.php:2
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: template-parts/pagination.php:11
+msgid "&laquo; Previous"
+msgstr "&laquo; Anterior"
+
+#: template-parts/pagination.php:12
+msgid "Next &raquo;"
+msgstr "Siguiente &raquo;"
+
+#: template-parts/partials/related-posts.php:26
+msgid "Related Posts"
+msgstr "Publicaciones relacionadas"
+
+#: template-parts/post-content-min.php:39 template-parts/post-content.php:34
+msgid "<span class=\"icon-comment\"></span> 0"
+msgstr ""
+
+#: template-parts/post-content-min.php:39 template-parts/post-content.php:34
+msgid "<span class=\"icon-comment\"></span> 1"
+msgstr ""
+
+#: template-parts/post-content-min.php:39 template-parts/post-content.php:34
+msgid "<span class=\"icon-comment\"></span> %"
+msgstr ""
+
+#. Theme Name of the plugin/theme
+msgid "Developer&Site"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Personal Theme, focused on developers where they show their postafolio, "
+"skills, blog and one about them. Site with serious and professional "
+"appearance, modifiable in colors and views."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "J.Rafael Simarro"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "http://juanrafaelsimarro.com"
+msgstr ""
