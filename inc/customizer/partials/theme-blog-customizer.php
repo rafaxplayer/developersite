@@ -1,15 +1,18 @@
 <?php
+
+    $defaults = developersite_default_theme_options();
+
     // Blog customizer
     $wp_customize->add_section( 'developersite_blog_custom_section', array(
         'title' => esc_html__( 'Blog Custom', 'developersite' ),
-        'priority' => 32,
+        'priority' => 30,
         'description' => esc_html__('Customize blog entries words and others', 'developersite'),
         'active_callback' => 'is_blog',
       ));
 
     // Set blog title text
     $wp_customize->add_setting( 'developersite_blog_title', array(
-        'default'   => esc_html__('Blog','developersite'),
+        'default'   => $defaults['developersite_blog_title'],
         'sanitize_callback' => 'sanitize_text_field',
         'transport'	=> 'postMessage',
     ));
@@ -25,14 +28,15 @@
 
     $wp_customize->selective_refresh->add_partial( 'developersite_blog_title', array(
         'selector' => '.blog-section h1',
-        'container_inclusive' => true,
-        'fallback_refresh'    => true,
+        'container_inclusive' => false,
+        'fallback_refresh'    => false,
+        'render_callback'=> 'developersite_customize_partial_blogtitle',
         
     ));  
 
     // Blog excerpt lenght
 	$wp_customize->add_setting( 'developersite_blog_excerpt' , array(
-		'default' => 40,
+		'default' => $defaults['developersite_blog_excerpt'],
 		'transport' => 'refresh',
 		'sanitize_callback' => 'absint',
 	)); 
@@ -62,7 +66,7 @@
 
     //checkbos show/hidde menu social
     $wp_customize->add_setting( 'show_related_posts' , array(
-        'default'           => true,
+        'default'           => $defaults['show_related_posts'],
         'type'              => 'theme_mod',
         'transport'         => 'refresh',
         'sanitize_callback' => 'developersite_sanitize_checkbox',

@@ -14,7 +14,9 @@ get_header(); ?>
 					
 				<div class="image-post" style="background-image:url(<?php echo get_the_post_thumbnail_url($post); ?>);">
 					<h1><?php the_title(); ?></h1>
-					<img class="admin-img" src="<?php echo developersite_get_avatar_image(); ?>" alt="Logo" class="logo-img">
+					<?php if(get_option('developersite_avatar_show')):?>
+						<img class="admin-img" src="<?php echo developersite_get_avatar_image(); ?>" alt="Logo" class="logo-img">
+					<?php endif; ?>
 				</div>
 				<!-- /post thumbnail -->	
 				

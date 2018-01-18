@@ -44,10 +44,8 @@
 						<?php the_tags( '<span class="icon-price-tags"></span> ', ' ', '<br>'); ?>
 					</div>
 				<?php endif; ?>
-			
 				<?php edit_post_link(__( 'Edit', 'developersite' )); // Always handy to have Edit Post Links available ?>
 			</div>
-			
 					<div class="social-share">
 						<h4><?php echo __('Share on :','developersite'); ?></h4>
 						<a href="" target=""><span class="icon-facebook2"></span></a>
@@ -57,31 +55,22 @@
 						<a href="" target=""><span class="icon-instagram"></span></a>
 						<a href="" target=""><span class="icon-linkedin"></span></a>
 					</div>
-			
 					<div class="separator light"></div>
-		
 					<?php get_template_part( '/template-parts/pagination','single'); ?>
 		</article>
 		<!-- /article -->
 			<?php get_template_part( 'template-parts/partials/related-posts'); ?> 
-
 			<?php comments_template(); ?>
 		<?php endwhile; ?>
-
 		<?php else: ?>
 		<!-- article -->
 		<article>
-
 			<h1><?php _e( 'Sorry, nothing to display.', 'developersite' ); ?></h1>
-
 		</article>
 		<!-- /article -->
-	
 		<?php endif; ?>
-		
 		</section>
 		<!-- /section -->
 	</main>
-
 
 <?php get_footer(); ?>

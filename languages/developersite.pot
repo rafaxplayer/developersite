@@ -146,6 +146,10 @@ msgstr ""
 msgid "Show/Hidde map on template contact"
 msgstr ""
 
+#: inc/admin-page/adminpage-settings-template-contact.php:62
+msgid "Save"
+msgstr ""
+
 #: inc/admin-page/adminpage-settings.php:2
 msgid "Dev&Site Theme Options"
 msgstr ""

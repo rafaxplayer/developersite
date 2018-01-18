@@ -46,7 +46,8 @@ function initMap() {
         }
 
         $('.botton-up').on('click', function() {
-            $.scrollTo('main', 800);
+            $('html, body').animate({ scrollTop: 0 }, 600);
+            return false;
         });
 
         $('.gallery a').each(function() {

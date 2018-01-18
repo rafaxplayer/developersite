@@ -84,8 +84,8 @@ get_header(); ?>
 				<?php the_content(); ?>
 
 				<div class="contact">
-
-					<?php if(get_option('developersite_maps_show')):?>
+					
+					<?php if( get_option('developersite_maps_show') ):?>
 						<div id="map"></div>
 					<?php endif;?>
 
@@ -121,15 +121,15 @@ get_header(); ?>
 					</div>
 					<div class="address">
 						<?php if(get_option( 'developersite_contact_address')):?>
-							<label><a href='http://maps.google.com/maps?q=<?php echo urlencode(get_option( 'developersite_contact_address')); ?>'><span class="icon-location"></span>&nbsp;&nbsp;<?php echo get_option( 'developersite_contact_address'); ?></a></label>
+							<label id="contact-address"><a href='http://maps.google.com/maps?q=<?php echo urlencode(get_option( 'developersite_contact_address')); ?>'><?php echo get_option( 'developersite_contact_address'); ?></a></label>
 						<?php endif; ?>
 						<?php if(get_option( 'developersite_contact_phone')):?>
-							<label><a href="tel:<?php echo get_option( 'developersite_contact_phone'); ?>" target="_top"><span class="icon-phone"></span>&nbsp;&nbsp;<?php echo get_option( 'developersite_contact_phone'); ?></a> </label>
+							<label id="contact-phone"><a href="tel:<?php echo get_option( 'developersite_contact_phone'); ?>" target="_top"><?php echo get_option( 'developersite_contact_phone'); ?></a></label>
 						<?php endif; ?>
 						<?php if(get_option( 'developersite_contact_whatsapp')):?>
-							<label><a href="https://api.whatsapp.com/send?phone=<?php echo get_option( 'developersite_contact_whatsapp'); ?>" target="_top"><span class="icon-whatsapp"></span>&nbsp;&nbsp;<?php echo get_option( 'developersite_contact_whatsapp'); ?></a> </label>
+							<label id="contact-whatsapp"><a href="https://api.whatsapp.com/send?phone=<?php echo get_option( 'developersite_contact_whatsapp'); ?>" target="_top"><?php echo get_option( 'developersite_contact_whatsapp'); ?></a> </label>
 						<?php endif; ?>
-							<label><a href="mailto::<?php echo get_option( 'developersite_contact_email'); ?>"><span class="icon-envelope-o"></span>&nbsp;&nbsp;<?php if(get_option('developersite_contact_email')): echo get_option( 'developersite_contact_email'); else: bloginfo('admin_email'); endif; ?></a></label>
+							<label id="contact-email"><a href="mailto::<?php echo get_option( 'developersite_contact_email'); ?>"><?php if(get_option('developersite_contact_email')): echo get_option( 'developersite_contact_email'); else: bloginfo('admin_email'); endif; ?></a></label>
 					</div>
 				</div>
 				
