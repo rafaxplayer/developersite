@@ -49,28 +49,28 @@
 		);
 	
 
-	foreach( $colors as $yinyang_colors ) {
+	foreach( $colors as $devsite_colors ) {
 		
 		//Settings
-		$wp_customize->add_setting( $yinyang_colors['slug'], array(
-			'default' => $yinyang_colors['default'],
+		$wp_customize->add_setting( $devsite_colors['slug'], array(
+			'default' => $devsite_colors['default'],
 			'transport' => 'refresh',
 			'sanitize_callback' => 'sanitize_hex_color',
 		)); 
 		//controls
-		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $yinyang_colors['slug'], array(
-			'label'      => $yinyang_colors['label'],
+		$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, $devsite_colors['slug'], array(
+			'label'      => $devsite_colors['label'],
 			'section'    => 'colors',
-			'settings'   => $yinyang_colors['slug'],
-			'description'=> $yinyang_colors['description']
+			'settings'   => $devsite_colors['slug'],
+			'description'=> $devsite_colors['description']
 		)));
 
-		if( $yinyang_colors['slug'] == 'developersite_links_color' || $yinyang_colors['slug'] == 'developersite_titles_color' ){
+		if( $devsite_colors['slug'] == 'developersite_links_color' || $devsite_colors['slug'] == 'developersite_titles_color' ){
 			//Selective
 			continue;
 		} 
-		$wp_customize->selective_refresh->add_partial( $yinyang_colors['slug'], array(
-			'selector' => $yinyang_colors['selector'],
+		$wp_customize->selective_refresh->add_partial( $devsite_colors['slug'], array(
+			'selector' => $devsite_colors['selector'],
 			'container_inclusive' => true,
 			'fallback_refresh' => false, 
 		));

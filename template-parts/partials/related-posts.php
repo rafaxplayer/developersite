@@ -8,7 +8,7 @@
     global $post;
     $tags = wp_get_post_tags($post->ID);
 
-    if ($tags && get_theme_mod( 'show_related_posts' )) :
+    if ($tags && get_theme_mod( 'developersite_show_related_posts' )) :
         $tag_ids = array();
         foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
             $args=array(

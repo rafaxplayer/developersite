@@ -4,7 +4,7 @@
 				<span class="icon-chevron-up botton-up"></span>
 				<!-- copyright -->
 				<div class="site-info">
-					<?php  echo get_option('developersite_footer_text') ;?>
+					<?php  echo '&copy;' . date('Y') . '&nbsp;' . get_option('developersite_footer_text') ;?>
 				</div>
 				<!-- /copyright -->
 			</footer>

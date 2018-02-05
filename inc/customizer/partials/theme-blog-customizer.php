@@ -1,7 +1,4 @@
 <?php
-
-    $defaults = developersite_default_theme_options();
-
     // Blog customizer
     $wp_customize->add_section( 'developersite_blog_custom_section', array(
         'title' => esc_html__( 'Blog Custom', 'developersite' ),
@@ -62,22 +59,21 @@
         'active_callback' => 'is_index',
     ));
     
-    // show/hidde related post on single template
-
     //checkbos show/hidde menu social
-    $wp_customize->add_setting( 'show_related_posts' , array(
-        'default'           => $defaults['show_related_posts'],
-        'type'              => 'theme_mod',
+    $wp_customize->add_setting( 'developersite_show_related_posts' , array(
+        'default'           => $defaults['developersite_show_related_posts'],
         'transport'         => 'refresh',
         'sanitize_callback' => 'developersite_sanitize_checkbox',
 
     ) );
 
-    $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'show_related_posts', array(
+    $wp_customize->add_control( 'developer_show_related_posts', array(
         'label'      => esc_html__( 'Related Posts Show/Hidde', 'developersite' ),
         'section'    => 'developersite_blog_custom_section',
-        'settings'   => 'show_related_posts',
+        'settings'   => 'developersite_show_related_posts',
         'description'=> esc_html__('Show/Hidde Related posts section on posts details','developersite'),
         'type'      => 'checkbox',
         'active_callback' => 'is_details',
-    )));
+    ));
+
+    

@@ -1,7 +1,7 @@
 /*
 	Theme Name: Developer&Site
 	Theme URI: 
-	Description: Personal Theme, focused on developers where they show their postafolio, skills, blog and one about them. Site with serious and professional appearance, modifiable in colors and views.
+	Description: Personal Theme, focused on developers where they show their postafolio, blog and one about them. Site with serious and professional appearance, modifiable in colors and views.
 	Version: 1.5
 	Author: J.Rafael Simarro
 	Author URI: http://juanrafaelsimarro.com
@@ -363,14 +363,6 @@ a img.aligncenter {
     content: "";
     display: table;
     clear: both;
-}
-
-img.aligncenter,
-div.aligncenter,
-figure.aligncenter,
-img.wp-post-image {
-    display: block;
-    margin: 1em auto;
 }
 
 img.alignright,
@@ -1612,6 +1604,11 @@ main section>h1:after {
     font-weight: 400;
 }
 
+.page .page-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .page p {
     font-size: 1.2rem;
     font-family: sans-serif;
@@ -1788,8 +1785,6 @@ main section>h1:after {
     border-bottom: 2px solid #333;
     height: 150px;
     background-color: black;
-    -webkit-filter: grayscale(100%);
-    filter: grayscale(100%);
 }
 
 .about_template .image-post .admin-img {
@@ -1935,6 +1930,7 @@ footer.site-footer .site-info {
 .sidebar-widget .widget_calendar #wp-calendar {
     width: 100%;
     max-width: 300px;
+    text-align: center;
 }
 
 .sidebar-widget .widget_calendar caption {
@@ -1945,7 +1941,6 @@ footer.site-footer .site-info {
 
 .sidebar-widget .widget_calendar tbody tr td {
     text-align: center;
-    padding: 5px;
 }
 
 .sidebar-widget .widget_calendar tbody tr td#today {
@@ -1954,7 +1949,6 @@ footer.site-footer .site-info {
 
 .sidebar-widget .widget_calendar tbody tr td a {
     border-radius: 50%;
-    padding: 5px;
     -webkit-transition: background .2s ease-in-out;
     transition: background .2s ease-in-out;
 }

@@ -11,10 +11,7 @@
 
 		<!-- post thumbnail -->
 		<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
-			<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				<div class="image-post" style="background-image:url(<?php echo get_the_post_thumbnail_url($post,'post'); ?>);">
-				</div>
-			</a>
+			<?php the_post_thumbnail('developersite-post-min');?>
 		<?php endif; ?>
 		<!-- /post thumbnail -->
 
@@ -25,7 +22,7 @@
 		    </h2>
 		    <!-- /post title -->
 
-            <?php developersitewp_excerpt(); ?>
+            <?php developersite_wp_excerpt(); ?>
 
             
         </div>

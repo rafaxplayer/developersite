@@ -26,15 +26,17 @@
 
             $defaults['developersite_footer_text'] = sprintf(esc_html__('&copy;%s Developer&Site Theme.'), date('Y'));
 
-            $defaults['show_related_posts'] = true;
-
-            $defaults['show_related_posts'] = true;
-
+            $defaults['developersite_show_related_posts'] = true;
+           
             $defaults['developersite_maps_show'] = false;
             
             $defaults['developersite_avatar_show'] = true;
 
+            $defaults['developersite_avatar_header_show'] = true;
+
             $defaults['developersite_maps_zoom'] = 16;
+
+            $defaults['developersite_avatar'] = esc_url( trailingslashit(get_template_directory_uri()).'/assets/images/user.jpg');
 
             return $defaults;
         }

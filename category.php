@@ -4,7 +4,7 @@
 		<!-- section -->
 		<section>
 
-			<h1><?php _e( '<span class="icon-folder-open"></span> Categories for ', 'developersite' ); single_cat_title(); ?></h1>
+			<h1><?php _e( '<span class="icon-folder-open"></span> Categories for &nbsp;', 'developersite' ); single_cat_title(); ?></h1>
 
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
@@ -24,7 +24,4 @@
 		</section>
 		<!-- /section -->
 	</main>
-
-
-
 <?php get_footer(); ?>

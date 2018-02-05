@@ -16,9 +16,13 @@
 				<header class="header clear" role="banner">
 						<!-- logo -->
 						<div class="admin-content">
-							<a href="<?php echo esc_url(home_url('/')); ?>">
-								<img class="admin-img" src="<?php echo developersite_get_avatar_image(); ?>" alt="Logo" class="logo-img">
-							</a>
+						
+							<?php if(get_theme_mod('developersite_avatar_header_show')): ?>
+
+								<a href="<?php echo esc_url(home_url('/')); ?>">
+									<img class="admin-img" src="<?php echo developersite_get_avatar_image(get_theme_mod( 'developersite_avatar')); ?>" alt="Logo" class="logo-img">
+								</a>
+							<?php endif;?>
 							<h1 class="site-title"><?php echo bloginfo('name'); ?></h1>
 							<span class="site-description"><?php echo bloginfo('description'); ?></span>
 						</div>

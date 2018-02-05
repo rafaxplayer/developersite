@@ -12,7 +12,7 @@
 			<!-- post thumbnail -->
 				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 					
-					<div class="image-post" style="background-image:url(<?php echo get_the_post_thumbnail_url($post,'page'); ?>);">
+					<div class="image-post" style="background-image:url(<?php echo get_the_post_thumbnail_url($post); ?>);">
 						<?php the_title('<h1 class="page-title title-image">','</h1>'); ?>
 					</div>
 					
@@ -27,10 +27,13 @@
 				<?php endif;?>
 
 				<div class="separator light"></div>
+				
+				<div class="page-content">
+					<?php the_content(); ?>
 
-				<?php the_content(); ?>
-
-				<?php edit_post_link(__( 'Edit', 'developersite' )); ?>
+					<?php edit_post_link(__( 'Edit', 'developersite' )); ?>
+				</div>		
+				
 
 			</article>
 			<!-- /article -->

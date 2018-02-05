@@ -1,7 +1,7 @@
 <?php
     
      // Templates customizer
-     $wp_customize->add_panel( 'developersite_templates_options', array(
+    $wp_customize->add_panel( 'developersite_templates_options', array(
             'title'      => esc_html__( 'Templates settings', 'developersite' ),
             'priority'   => 35,
             'capability' => 'edit_theme_options',
@@ -182,6 +182,27 @@
         'type' => 'checkbox'
         
     ));
+
+    // avatar image for template contact
+	$wp_customize->add_setting( 'developersite_avatar_contact', array(
+        'default'   => $defaults['developersite_avatar'],
+        'type' => 'option',
+		'sanitize_callback' => 'esc_url_raw',
+	) ); 
+
+	$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'developersite_avatar_contact', array(
+		'label'    => __( 'Avatar for template contact', 'developersite' ),
+		'section'  => 'developersite_template_about_section',
+		'settings' => 'developersite_avatar_contact',
+		'description'=> esc_html__('Set personal avatar for template contact','developersite')
+    )));
+    
+    $wp_customize->selective_refresh->add_partial( 'developersite_avatar_contact', array(
+		'selector' => '.about_template .admin-img',
+		'render_callback' => 'developersite_customize_avatar',
+		'container_inclusive' => true,
+		'fallback_refresh'    => false, 
+	) );
 
     
  ?>

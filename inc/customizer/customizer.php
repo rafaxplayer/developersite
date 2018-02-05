@@ -49,10 +49,26 @@ function developersite_theme_customizer( $wp_customize ) {
 		'selector' => '.site-description',
 		'render_callback' => 'developersite_customize_partial_blogdescription',
 	) );
+
+	//Show/Hidde avatar
+    $wp_customize->add_setting( 'developersite_avatar_header_show', array(
+		'default'   => $defaults['developersite_avatar_header_show'] ,
+		'sanitize_callback' => 'developersite_sanitize_checkbox',
+        'transport'	=> 'refresh',
+    ));
+
+    $wp_customize->add_control('developersite_avatar_header_show' , array(
+        'label' => esc_html__('Avatar Show/hidde','developersite'),
+        'section' => 'title_tagline',
+        'setting'=>'developersite_avatar_header_show',
+        'description' => esc_html__('show or hide avatar','developersite'),
+        'type' => 'checkbox'
+        
+	));
 	
 	// avatar image
 	$wp_customize->add_setting( 'developersite_avatar', array(
-		'default'   => esc_url(get_template_directory_uri().'/assets/images/user.jpg'),
+		'default' => $defaults['developersite_avatar'],
 		'sanitize_callback' => 'esc_url_raw',
 	) ); 
 
@@ -84,7 +100,7 @@ function is_index(){
 }
 
 function is_details(){
-	return (is_blog() && is_single());
+	return (is_single());
 }
 
 function is_template(){

@@ -18,6 +18,12 @@ function developersite_setup () {
 
         // Add Thumbnail Theme Support
         add_theme_support('post-thumbnails');
+       
+        add_image_size( 'developersite-post', 800, 400, true );
+
+        add_image_size( 'developersite-post-min', 800, 300, true );
+        
+        add_image_size( 'developersite-page', 1038, 576, true );
 
         add_theme_support( "title-tag" );
         
@@ -93,9 +99,7 @@ function developersite_setup () {
     load_theme_textdomain('developersite', get_template_directory() . '/languages');
 
     //custom images sizes
-    add_image_size('page', 1000, 400, true);
-    add_image_size('post-single', 1000, 250, true);
-    add_image_size('post', 800, 200, true); 
+    
     add_image_size('related-post', 300, 200, true);
     
        
@@ -116,12 +120,11 @@ function developersite_customize_css()
                 .main-sidebar .navigation-bar nav.social { background: <?php echo get_theme_mod('developersite_header_color', '#253e44'); ?>; }
                 .main-sidebar .navigation-bar{ background: <?php echo get_theme_mod('developersite_header_color', '#253e44'); ?>; }
              } 
+
          </style>
     <?php
 }
-
-
-
+// add javascript for the customizeer
 function developersite_customizer_live_preview () 
 { 
 	wp_enqueue_script ( 
@@ -139,7 +142,7 @@ function developersite_customizer_live_preview ()
 \*------------------------------------*/
 
 
-// developersite Blank navigation
+// developersite navigation
 function developersite_nav()
 {
     wp_nav_menu(
@@ -158,17 +161,6 @@ function developersite_nav()
         );
 }
 
-//admin enqueue scripts
-function developersite_wp_admin_scripts($hook_suffix) {
-
-    if (in_array($hook_suffix, array('post.php', 'post-new.php'))) {
-        $screen = get_current_screen();
-        if(is_object( $screen ) && 'post' === $screen->post_type){
-            
-            wp_enqueue_script('featured-image-required',get_template_directory_uri() . '/assets/js/admin.js'); // Enqueue it!
-        }
-    }
-}
 
 
 // Load developersite scripts (header.php)
@@ -222,7 +214,6 @@ function developersite_add_async_defer($tag, $handle){
 }
 
 
-
 // Load developersite styles
 function developersite_styles()
 {
@@ -261,7 +252,6 @@ function developersite_wp_nav_menu_args($args = '')
     $args['container'] = false;
     return $args;
 }
-
 
 // Remove invalid rel attribute values in the categorylist
 function developersite_remove_category_rel_from_category_list($thelist)
@@ -313,8 +303,9 @@ function developersite_remove_recent_comments_style()
     ));
 }
 
-
-function developersite_readmore($link){
+// read more
+function developersite_readmore($link)
+{
     if ( is_admin() ) {
         return $link;
     }
@@ -327,12 +318,12 @@ function developersite_readmore($link){
 }
 
 // Create the Custom Excerpts callback
-function developersitewp_excerpt()
+function developersite_wp_excerpt()
 {
     global $post;
     add_filter('excerpt_length', function(){
         return get_theme_mod('developersite_blog_excerpt', 40);
-    });
+    },999);
     
     if (function_exists('developersite_readmore')) {
         add_filter('excerpt_more', 'developersite_readmore');
@@ -376,18 +367,31 @@ function developersite_enable_threaded_comments()
 }
 
 //remove tags widget cloud parentheses
-function developersite_tagcloud_postcount_filter ($variable) {
+function developersite_tagcloud_postcount_filter ($variable) 
+{
     $variable = str_replace('<span class="tag-link-count"> (', ' <span class="post_count"> ', $variable);
     $variable = str_replace(')</span>', '</span>', $variable);
     return $variable;
 }
 
+// Automatically set the image Title, Alt-Text, Caption & Description upon upload
+function developersite_add_img_title( $attr, $attachment = null ) {
+    global $post;
+    $img_title = trim( strip_tags( $attachment->post_title ) );
+ 
+    $attr['title'] = $img_title;
+    $attr['alt'] = $img_title;
+ 
+    return $attr;
+}
+
+
+
 /*------------------------------------*\
-	Actions + Filters + ShortCodes
+	Actions + Filters 
 \*------------------------------------*/
 
 // Add Actions
-add_action( 'admin_enqueue_scripts', 'developersite_wp_admin_scripts' );// admin panel Custom scripts
 add_action('init', 'developersite_header_scripts'); // Add Custom Scripts to wp_head
 add_action('wp_print_scripts', 'developersite_conditional_scripts'); // Add Conditional Page Scripts
 add_action('get_header', 'developersite_enable_threaded_comments'); // Enable Threaded Comments
@@ -397,35 +401,23 @@ add_action('widgets_init', 'developersite_remove_recent_comments_style'); // Rem
 add_action( 'customize_preview_init', 'developersite_customizer_live_preview' );
 add_action( 'wp_head', 'developersite_customize_css');
 
+
 // Add Filters
 add_filter('avatar_defaults', 'developersite_gravatar'); // Custom Gravatar in Settings > Discussion
 add_filter('body_class', 'developersite_add_slug_to_body_class'); // Add slug to body class (Starkers build)
-add_filter('widget_text', 'do_shortcode'); // Allow shortcodes in Dynamic Sidebar
-add_filter('widget_text', 'shortcode_unautop'); // Remove <p> tags in Dynamic Sidebars (better!)
 add_filter('wp_nav_menu_args', 'developersite_wp_nav_menu_args'); // Remove surrounding <div> from WP Navigation
 add_filter('wp_tag_cloud','developersite_tagcloud_postcount_filter');
-add_filter( 'script_loader_tag', 'developersite_add_async_defer', 10, 2);
-add_filter( 'use_default_gallery_style', '__return_false' ); //remove default stylesheet´s for galleries
+add_filter('script_loader_tag', 'developersite_add_async_defer', 10, 2);
+
+add_filter('use_default_gallery_style', '__return_false' ); //remove default stylesheet´s for galleries
 add_filter('the_category', 'developersite_remove_category_rel_from_category_list'); // Remove invalid rel attribute
-add_filter('the_excerpt', 'shortcode_unautop'); // Remove auto <p> tags in Excerpt (Manual Excerpts only)
-add_filter('the_excerpt', 'do_shortcode'); // Allows Shortcodes to be executed in Excerpt (Manual Excerpts only)
 add_filter('style_loader_tag', 'developersite_style_remove'); // Remove 'text/css' from enqueued stylesheet
 add_filter('post_thumbnail_html', 'developersite_remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to thumbnails
 add_filter('image_send_to_editor', 'developersite_remove_thumbnail_dimensions', 10); // Remove width and height dynamic attributes to post images
+add_filter( 'wp_get_attachment_image_attributes','developersite_add_img_title', 10, 2 );//Automatically set the image Title, Alt-Text, Caption & Description upon upload
 
 // Remove Filters
 remove_filter('the_excerpt', 'wpautop'); // Remove <p> tags from Excerpt altogether
-
-
-function developersite_get_avatar_image(){
-
-    $avatar_image = get_theme_mod('developersite_avatar');
-    
-    if(!$avatar_image){
-        $avatar_image =  trailingslashit(get_template_directory_uri()).'/assets/images/user.jpg';
-    }
-    return esc_url($avatar_image);
-}
 
 if(file_exists( trailingslashit(get_template_directory()) . '/inc/customizer/theme-defaults-customizer.php')){
     require_once  trailingslashit(get_template_directory()) . '/inc/customizer/theme-defaults-customizer.php';
@@ -435,9 +427,8 @@ if(file_exists( trailingslashit(get_template_directory()) . '/inc/customizer/cus
     require_once  trailingslashit(get_template_directory()) . '/inc/customizer/customizer.php';
 }
     
-if(file_exists( trailingslashit(get_template_directory()) . '/inc/dev-site-config.php')){
-    require_once  trailingslashit(get_template_directory()) . '/inc/dev-site-config.php';
+if(file_exists( trailingslashit(get_template_directory()) . '/inc/template-functions.php')){
+    require_once  trailingslashit(get_template_directory()) . '/inc/template-functions.php';
 }
-
 
 ?>
