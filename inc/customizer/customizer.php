@@ -103,17 +103,6 @@ function is_details(){
 	return (is_single());
 }
 
-function is_template(){
-	return (is_page_template('template-contact.php' ) || is_page_template('template-about.php'));
-}
-
-function is_template_contact(){
-	return is_page_template('template-contact.php');
-}
-
-function is_template_about(){
-	return is_page_template('template-about.php');
-}
 
 function developersite_sanitize_checkbox( $checked ){
     //returns true if checkbox is checked

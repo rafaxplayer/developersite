@@ -20,7 +20,11 @@
 
 			<?php endif; ?>
 
-			<?php get_template_part('pagination'); ?>
+			<?php the_posts_pagination( array(
+					'prev_text'          => esc_html__( 'Previous', 'developersite' ),
+					'next_text'          => esc_html__( 'Next', 'developersite' ) ,
+					'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'developersite' ) . ' </span>',
+					)); ?> 
 
 		</section>
 		<!-- /section -->

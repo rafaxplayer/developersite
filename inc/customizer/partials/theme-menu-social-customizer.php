@@ -52,12 +52,31 @@ $social[] = array(
 
 //Menu social customize
 $wp_customize->add_section( 'developersite_menu_social_section', array(
-    'title' => esc_html__( 'Social Menu', 'developersite' ),
+    'title' => esc_html__( 'Social Red settings', 'developersite' ),
     'priority' => 30,
-    'description' => esc_html__('Set Menu Social icons. To delete icon leave empty fields', 'developersite'),
+    'description' => esc_html__('Social Red settings', 'developersite'),
   ));
 
-//checkbos show/hidde menu social
+  // Show social share
+  $wp_customize->add_setting( 'developersite_show_social_share', array(
+    'default'   => $defaults['developersite_show_social_share'],
+    'type'              => 'theme_mod',
+    'transport'         => 'refresh',
+    'sanitize_callback' => 'developersite_sanitize_checkbox',
+    
+));
+
+$wp_customize->add_control('developersite_show_social_share', array(
+    'label' => esc_html__( 'Show or Hide social share panel' ,'developersite'),
+    'setting'  => 'developersite_show_social_share',
+    'section' => 'developersite_menu_social_section',
+    'priority'   => 1,
+    'description' => esc_html__( 'Show or Hide social share panel on pages and details posts' ,'developersite'),
+    'type' => 'checkbox',
+    
+));
+
+//checkbox show/hidde menu social
 $wp_customize->add_setting( 'developersite_show_menu_social' , array(
     'default'           => $defaults['developersite_show_menu_social'],
     'type'              => 'theme_mod',
@@ -69,8 +88,9 @@ $wp_customize->add_setting( 'developersite_show_menu_social' , array(
 $wp_customize->add_control('developersite_show_menu_social', array(
     'label'      => esc_html__( 'Menu Social Show/Hidde', 'developersite' ),
     'section'    => 'developersite_menu_social_section',
-    'priority'   => 1,
+    'priority'   => 2,
     'settings'   => 'developersite_show_menu_social',
+    'description' => esc_html__( 'Menu Social Show/Hidde , leave the field empty to hide icon' ,'developersite'),
     'type'      => 'checkbox',
 ));
 

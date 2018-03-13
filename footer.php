@@ -1,10 +1,10 @@
 			
 			<!-- footer -->
 			<footer class="site-footer" role="contentinfo">
-				<span class="icon-chevron-up botton-up"></span>
+				<?php echo developersite_get_svg('chevron-up');?>
 				<!-- copyright -->
 				<div class="site-info">
-					<?php  echo '&copy;' . date('Y') . '&nbsp;' . get_option('developersite_footer_text') ;?>
+					<?php  echo '&copy;' . date('Y') . '&nbsp;' . esc_html(get_option('developersite_footer_text')) ;?>
 				</div>
 				<!-- /copyright -->
 			</footer>

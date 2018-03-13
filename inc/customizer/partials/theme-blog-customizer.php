@@ -71,7 +71,7 @@
         'label'      => esc_html__( 'Related Posts Show/Hidde', 'developersite' ),
         'section'    => 'developersite_blog_custom_section',
         'settings'   => 'developersite_show_related_posts',
-        'description'=> esc_html__('Show/Hidde Related posts section on posts details','developersite'),
+        'description'=> esc_html__('Related posts section on posts details. Only if there are labels on the entries that relate them','developersite'),
         'type'      => 'checkbox',
         'active_callback' => 'is_details',
     ));

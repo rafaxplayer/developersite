@@ -15,19 +15,20 @@
 				<!-- header -->
 				<header class="header clear" role="banner">
 						<!-- logo -->
+						<a href="<?php echo esc_url(home_url('/')); ?>">
 						<div class="admin-content">
 						
-							<?php if(get_theme_mod('developersite_avatar_header_show')): ?>
-
-								<a href="<?php echo esc_url(home_url('/')); ?>">
-									<img class="admin-img" src="<?php echo developersite_get_avatar_image(get_theme_mod( 'developersite_avatar')); ?>" alt="Logo" class="logo-img">
-								</a>
+							<?php 
+							
+							if(get_theme_mod('developersite_avatar_header_show', true)): ?>
+								<img class="admin-img" src="<?php echo developersite_get_avatar_image(get_theme_mod( 'developersite_avatar')); ?>" alt="Logo" class="logo-img">
 							<?php endif;?>
-							<h1 class="site-title"><?php echo bloginfo('name'); ?></h1>
-							<span class="site-description"><?php echo bloginfo('description'); ?></span>
+							<?php the_custom_logo();?>
+							<h1 class="site-title"><?php bloginfo('name'); ?></h1>
+							<span class="site-description"><?php bloginfo('description'); ?></span>
 						</div>
-						
-						<span class="button-toggle icon-text"></span>	
+						</a>
+						<span class="button-toggle"><?php echo developersite_get_svg('menu');?></span>	
 				</header>
 
 				<!-- /header -->
@@ -44,7 +45,17 @@
 					<?php if(has_nav_menu('header-menu')):?>
 						<!-- nav -->
 						<nav class="nav" role="navigation">
-							<?php developersite_nav(); ?>
+							<?php wp_nav_menu(array(
+									'theme_location'  => 'header-menu',
+									'container'       => 'div',
+									'container_class' => 'menu-{menu slug}-container',
+									'menu_class'      => 'menu',
+									'menu_id'         => 'header-menu',
+									'echo'            => true,
+									'fallback_cb'     =>  'wp_page_menu',
+									'items_wrap'      => '<ul>%3$s</ul>',
+									'depth'           => 0
+									));?>
 						</nav>
 						<!-- /nav -->
 					<?php endif; ?>

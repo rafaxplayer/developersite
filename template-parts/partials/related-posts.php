@@ -2,15 +2,15 @@
 /**
  * Partial for related posts view
  */
-
-
-    $orig_post = $post;
+    
     global $post;
     $tags = wp_get_post_tags($post->ID);
 
     if ($tags && get_theme_mod( 'developersite_show_related_posts' )) :
         $tag_ids = array();
-        foreach($tags as $individual_tag) $tag_ids[] = $individual_tag->term_id;
+        foreach($tags as $individual_tag) {
+            $tag_ids[] = $individual_tag->term_id;
+        }
             $args=array(
                 'tag__in' => $tag_ids,
                 'post__not_in' => array($post->ID),
@@ -48,7 +48,7 @@
                 </a>
             </div>
 
-        <?php endwhile; $post = $orig_post; wp_reset_query();?>
+        <?php endwhile; wp_reset_query();?>
         </div>
         <?php endif; ?>
     <?php endif; ?>

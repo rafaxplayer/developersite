@@ -40,8 +40,8 @@
 
 		<?php endwhile; ?>
 		
-		<?php get_template_part( '/template-parts/pagination', 'page');?>
-
+		<?php get_template_part( '/template-parts/partials/social-share');?>
+		
 		<?php else: ?>
 
 			<!-- article -->

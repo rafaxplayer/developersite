@@ -10,6 +10,7 @@
 				<?php if ( has_post_thumbnail()) : // Check if thumbnail exists ?>
 				
 					<div class="image-post" style="background-image:url(<?php echo get_the_post_thumbnail_url($post); ?>);">
+						
 						<?php the_title('<h1 class="post-title title-image">','</h1>'); ?>
 					</div>
 				<?php else:?>
@@ -46,16 +47,15 @@
 				<?php endif; ?>
 				<?php edit_post_link(__( 'Edit', 'developersite' )); // Always handy to have Edit Post Links available ?>
 			</div>
-					<div class="social-share">
-						<h4><?php echo __('Share on :','developersite'); ?></h4>
-						<a href="http://www.facebook.com/sharer.php?u=<?php the_permalink();?>&amp;t=<?php the_title(); ?>" title="Share on Facebook."><span class="icon-facebook2"></span></a>
-						<a href="http://twitter.com/home/?status=<?php the_title(); ?> - <?php the_permalink(); ?>" title="Tweet this!"><span class="icon-twitter"></span></a>
-						<a href="https://plus.google.com/share?url=<?php the_permalink(); ?>" onclick="javascript:window.open(this.href,'', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><span class="icon-google-plus2"></span></a>
-						<a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); echo $url; ?>"><span class="icon-pinterest-square"></span></a>
-						<a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>"><span class="icon-linkedin"></span></a>
-					</div>
-					<div class="separator light"></div>
-					<?php get_template_part( '/template-parts/pagination','single'); ?>
+
+			<?php get_template_part( '/template-parts/partials/social-share');?>
+				
+			<?php echo developersite_get_separator(); ?>
+			
+			<?php the_post_navigation(array(
+				'prev_text'                  => __( '<i class="fas fa-long-arrow-alt-left"></i> Previous Entry' ,'developersite'),
+				'next_text'                  => __( 'Next Entry <i class="fas fa-long-arrow-alt-right"></i>','developersite' ),
+			)); ?>
 		</article>
 		<!-- /article -->
 			<?php get_template_part( 'template-parts/partials/related-posts'); ?> 

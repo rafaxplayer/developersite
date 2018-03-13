@@ -30,13 +30,14 @@
         <!-- info comments and editlink-->
         <div class="info">
             <div class="categories">
-                <span class="icon-folder-open"></span><?php the_category( '/') ?>
+                <?php echo developersite_get_svg('folder-open'); the_category( '/') ?>
             </div>
             
-            <span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( '<span class="icon-comment"></span> 0', 'developersite' ), __( '<span class="icon-comment"></span> 1', 'developersite' ), __( '<span class="icon-comment"></span> %', 'developersite' )); ?></span>
+            <span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( developersite_get_svg('comment').' 0',developersite_get_svg('comment').' 1', developersite_get_svg('comment').' %'); ?></span>
             
         </div>
         <!-- /info -->
+		<?php echo developersite_get_separator();?>
 </article>
-<div class="separator light"></div>
+
 	<!-- /article -->

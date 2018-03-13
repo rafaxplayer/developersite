@@ -44,7 +44,7 @@
 		'slug'	=>	'developersite_titles_color', 
 		'default' => $defaults['developersite_titles_color'],
 		'label' =>	__( 'Titles Color', 'developersite' ),
-		'description' =>	__('Set all titles color','developersite'),
+		'description' =>	__('Set blog titles color','developersite'),
 		'selector' => '.nav',
 		);
 	

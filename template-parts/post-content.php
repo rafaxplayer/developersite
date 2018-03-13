@@ -24,15 +24,20 @@
 		</div>
 		<!-- /categories -->
 		
-		<?php developersite_wp_excerpt() ?>
+		<?php developersite_wp_excerpt();
 
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'developersite' ),
+				'after'  => '</div>',
+			) );
+		?>
+		
 		<!-- info comments and editlink-->
 		<div class="info">
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( '<span class="icon-comment"></span> 0', 'developersite' ), __( '<span class="icon-comment"></span> 1', 'developersite' ), __( '<span class="icon-comment"></span> %', 'developersite' )); ?></span>
+		<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( developersite_get_svg('comment').' 0',developersite_get_svg('comment').' 1', developersite_get_svg('comment').' %'); ?></span>
 			<?php edit_post_link(__( 'Edit', 'developersite' )); ?>
 		</div>
 		<!-- /info -->
-		
-		<div class="separator light"></div>
+		<?php echo developersite_get_separator();?>
 	</article>
 	<!-- /article -->

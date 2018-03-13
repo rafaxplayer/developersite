@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: Developer&Site\n"
-"POT-Creation-Date: 2018-01-18 23:56+0100\n"
-"PO-Revision-Date: 2018-01-18 23:56+0100\n"
+"POT-Creation-Date: 2018-03-11 15:07+0100\n"
+"PO-Revision-Date: 2018-03-11 15:07+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -33,6 +33,18 @@ msgstr ""
 msgid "Archives"
 msgstr ""
 
+#: archive.php:22 index.php:16 search.php:24
+msgid "Previous"
+msgstr ""
+
+#: archive.php:23 index.php:17 search.php:25
+msgid "Next"
+msgstr ""
+
+#: archive.php:24 index.php:18 search.php:26
+msgid "Page"
+msgstr ""
+
 #: author.php:9
 msgid "Author Archives for "
 msgstr ""
@@ -57,13 +69,13 @@ msgstr ""
 msgid "% Comments"
 msgstr ""
 
-#: author.php:62 page.php:47 single.php:68 template-about.php:38
-#: template-contact.php:148 template-parts/post-none.php:5
+#: author.php:62 page.php:50 single.php:67 template-about.php:38
+#: template-parts/post-none.php:5
 msgid "Sorry, nothing to display."
 msgstr ""
 
 #: category.php:7
-msgid "<span class=\"icon-folder-open\"></span> Categories for "
+msgid "<span class=\"icon-folder-open\"></span> Categories for &nbsp;"
 msgstr ""
 
 #. translators: 1: title.
@@ -86,39 +98,28 @@ msgstr[1] ""
 msgid "Comments are closed."
 msgstr ""
 
-#: functions.php:53
-msgid "Use template-about for page about"
-msgstr ""
-
-#: functions.php:58
-msgid ""
-"Use template-contact for page contact and set settings in admin panel "
-"developersite Options"
-msgstr ""
-
-#: functions.php:79
-msgid "Primary Navigation"
-msgstr ""
-
-#: functions.php:254
+#: functions.php:35
 msgid "Principal Menu"
 msgstr ""
 
-#: functions.php:295
+#: functions.php:105
+msgid "Primary Navigation"
+msgstr ""
+
+#: functions.php:230
 msgid "Widget Area 1"
 msgstr ""
 
-#: functions.php:296
+#: functions.php:231
 msgid "Description for this widget-area..."
 msgstr ""
 
 #. translators: %s: Name of current post
-#: functions.php:324 template-parts/partials/related-posts.php:45
+#: functions.php:251 template-parts/partials/related-posts.php:45
 msgid "READ MORE"
 msgstr ""
 
 #: inc/customizer/customizer.php:61
-#: inc/customizer/partials/theme-templates-customizer.php:178
 msgid "Avatar Show/hidde"
 msgstr ""
 
@@ -134,43 +135,43 @@ msgstr ""
 msgid "Set personal avatar for admintrator site"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:7
+#: inc/customizer/partials/theme-blog-customizer.php:4
 msgid "Blog Custom"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:9
+#: inc/customizer/partials/theme-blog-customizer.php:6
 msgid "Customize blog entries words and others"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:21
+#: inc/customizer/partials/theme-blog-customizer.php:18
 msgid "Blog title"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:24
+#: inc/customizer/partials/theme-blog-customizer.php:21
 msgid "Set Blog custom title"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:45
+#: inc/customizer/partials/theme-blog-customizer.php:42
 msgid "Post Excerpt Lenght"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:48
+#: inc/customizer/partials/theme-blog-customizer.php:45
 msgid "Set post excerpt lenght"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:54
+#: inc/customizer/partials/theme-blog-customizer.php:51
 msgid "40 (default)"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:60
+#: inc/customizer/partials/theme-blog-customizer.php:57
 msgid "All Content"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:77
+#: inc/customizer/partials/theme-blog-customizer.php:71
 msgid "Related Posts Show/Hidde"
 msgstr ""
 
-#: inc/customizer/partials/theme-blog-customizer.php:80
+#: inc/customizer/partials/theme-blog-customizer.php:74
 msgid "Show/Hidde Related posts section on posts details"
 msgstr ""
 
@@ -211,7 +212,7 @@ msgid "Titles Color"
 msgstr ""
 
 #: inc/customizer/partials/theme-colors-customizer.php:47
-msgid "Set all titles color"
+msgid "Set blog titles color"
 msgstr ""
 
 #: inc/customizer/partials/theme-footer-customizer.php:5
@@ -219,7 +220,6 @@ msgid "Footer options"
 msgstr ""
 
 #: inc/customizer/partials/theme-footer-customizer.php:7
-#: inc/customizer/partials/theme-templates-customizer.php:15
 msgid "Enter your contact information and Google maps data"
 msgstr ""
 
@@ -244,119 +244,31 @@ msgid "Your %s URL"
 msgstr ""
 
 #: inc/customizer/partials/theme-menu-social-customizer.php:55
-msgid "Social Menu"
-msgstr ""
-
 #: inc/customizer/partials/theme-menu-social-customizer.php:57
-msgid "Set Menu Social icons. To delete icon leave empty fields"
+msgid "Social Red settings"
 msgstr ""
 
 #: inc/customizer/partials/theme-menu-social-customizer.php:70
+msgid "Show or Hide social share panel"
+msgstr ""
+
+#: inc/customizer/partials/theme-menu-social-customizer.php:74
+msgid "Show or Hide social share panel on pages and details posts"
+msgstr ""
+
+#: inc/customizer/partials/theme-menu-social-customizer.php:89
 msgid "Menu Social Show/Hidde"
 msgstr ""
 
-#: inc/customizer/partials/theme-templates-customizer.php:5
-msgid "Templates settings"
+#: inc/customizer/partials/theme-menu-social-customizer.php:93
+msgid "Menu Social Show/Hidde , leave the field empty to hide icon"
 msgstr ""
 
-#: inc/customizer/partials/theme-templates-customizer.php:13
-msgid "Templates contact settings"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:28
-msgid "Address"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:31
-msgid "Set address"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:44
-msgid "Phone"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:47
-msgid "Set Phone"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:61
-msgid "Whatsapp"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:64
-msgid "Set whatsapp"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:77
-msgid "Email"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:80
-msgid ""
-"Set email for contact form, by default the administrator email will be used"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:95
-msgid "Google Maps"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:98
-msgid "show or hide google map in the contact template"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:111
-msgid "Google Maps latitude"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:114
-msgid "Enter your latitude for the map"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:125
-msgid "Google Maps longitude"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:128
-msgid "Enter your longitude for the map"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:139
-msgid "Google Maps zoom"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:142
-msgid "Enter your zoom value for the map"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:153
-msgid "Google Maps api key"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:156
-msgid "Enter your Google maps api key"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:162
-msgid "Templates about settings"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:181
-msgid "show or hide avatar in the about template"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:194
-msgid "Avatar for template contact"
-msgstr ""
-
-#: inc/customizer/partials/theme-templates-customizer.php:197
-msgid "Set personal avatar for template contact"
-msgstr ""
-
-#: inc/customizer/theme-defaults-customizer.php:23
+#: inc/customizer/theme-defaults-customizer.php:25
 msgid "Blog"
 msgstr ""
 
-#: inc/customizer/theme-defaults-customizer.php:27
+#: inc/customizer/theme-defaults-customizer.php:29
 #, php-format
 msgid "&copy;%s Developer&Site Theme."
 msgstr ""
@@ -365,8 +277,8 @@ msgstr ""
 msgid "home"
 msgstr ""
 
-#: page.php:33 single.php:47 template-about.php:25 template-contact.php:136
-#: template-parts/post-content.php:35
+#: page.php:34 single.php:48 template-about.php:25
+#: template-parts/post-content-list.php:35 template-parts/post-content.php:32
 msgid "Edit"
 msgstr ""
 
@@ -379,60 +291,43 @@ msgstr ""
 msgid "Search"
 msgstr ""
 
-#: single.php:34
-msgid "/ Published by "
+#: single.php:35
+msgid " / Published by "
 msgstr ""
 
-#: single.php:50
-msgid "Share on :"
+#: single.php:56
+msgid "<i class=\"fas fa-long-arrow-alt-left\"></i> Previous Entry"
+msgstr ""
+
+#: single.php:57
+msgid "Next Entry <i class=\"fas fa-long-arrow-alt-right\"></i>"
 msgstr ""
 
 #: tag.php:7
 msgid "<span class=\"icon-tags\"></span> Tag Archive: "
 msgstr ""
 
-#: template-contact.php:106
-msgid "* Enter your name"
-msgstr ""
-
-#: template-contact.php:110
-msgid "* Enter your email"
-msgstr ""
-
-#: template-contact.php:114
-msgid "* Enter your message"
-msgstr ""
-
-#: template-contact.php:118
-msgid "Send Message"
-msgstr ""
-
-#: template-parts/pagination-page.php:2
-msgid "Pages:"
-msgstr ""
-
-#: template-parts/pagination.php:11
-msgid "&laquo; Previous"
-msgstr ""
-
-#: template-parts/pagination.php:12
-msgid "Next &raquo;"
-msgstr ""
-
 #: template-parts/partials/related-posts.php:26
 msgid "Related Posts"
 msgstr ""
 
-#: template-parts/post-content-min.php:39 template-parts/post-content.php:34
-msgid "<span class=\"icon-comment\"></span> 0"
+#: template-parts/partials/social-share.php:9
+msgid "Share on :"
 msgstr ""
 
-#: template-parts/post-content-min.php:39 template-parts/post-content.php:34
-msgid "<span class=\"icon-comment\"></span> 1"
+#: template-parts/post-content-list.php:34
+#: template-parts/post-content-min.php:36 template-parts/post-content.php:31
+msgid " 0"
 msgstr ""
 
-#: template-parts/post-content-min.php:39 template-parts/post-content.php:34
-msgid "<span class=\"icon-comment\"></span> %"
+#: template-parts/post-content-list.php:34
+#: template-parts/post-content-min.php:36 template-parts/post-content.php:31
+msgid " 1"
+msgstr ""
+
+#: template-parts/post-content-list.php:34
+#: template-parts/post-content-min.php:36 template-parts/post-content.php:31
+msgid " %"
 msgstr ""
 
 #. Theme Name of the plugin/theme
@@ -441,9 +336,9 @@ msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Personal Theme, focused on developers where they show their postafolio, "
-"skills, blog and one about them. Site with serious and professional "
-"appearance, modifiable in colors and views."
+"Personal Theme, focused on developers where they show their postafolio, blog "
+"and one about them. Site with serious and professional appearance, "
+"modifiable in colors and views."
 msgstr ""
 
 #. Author of the plugin/theme
