@@ -76,4 +76,19 @@
         'active_callback' => 'is_details',
     ));
 
-    
+    //checkbos show/hidde menu social
+    $wp_customize->add_setting( 'developersite_show_social_share' , array(
+        'default'           => $defaults['developersite_show_social_share'],
+        'transport'         => 'refresh',
+        'sanitize_callback' => 'developersite_sanitize_checkbox',
+
+    ) );
+
+    $wp_customize->add_control( 'developer_show_social_share_control', array(
+        'label'      => esc_html__( 'Social share Show/Hidde', 'developersite' ),
+        'section'    => 'developersite_blog_custom_section',
+        'settings'   => 'developersite_show_social_share',
+        'description'=> esc_html__('Social share panel on posts details.','developersite'),
+        'type'      => 'checkbox',
+        'active_callback' => 'is_details',
+    ));

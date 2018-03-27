@@ -106,7 +106,10 @@ function is_details(){
 
 function developersite_sanitize_checkbox( $checked ){
     //returns true if checkbox is checked
-    return ( ( isset( $checked ) && true === $checked ) ? true : false );
+	if('1'== $checked){
+		return true;
+	}
+	return false;
 }
 
 function developersite_customize_avatar() {

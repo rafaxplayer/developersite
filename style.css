@@ -2,7 +2,7 @@
 	Theme Name: Developer&Site
 	Theme URI: 
 	Description: Personal Theme, focused on developers where they show their postafolio, blog and one about them. Site with serious and professional appearance, modifiable in colors and views.
-	Version: 1.5.1
+	Version: 1.5.2
 	Author: J.Rafael Simarro
 	Author URI: http://juanrafaelsimarro.com
 	Tags: left-sidebar, custom-colors, custom-menu, featured-images, theme-options, threaded-comments, translation-ready, blog
@@ -572,9 +572,11 @@ p img.alignleft {
     -webkit-clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
     clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
 }
-.separator{
-    display:none;
+
+.separator {
+    display: none;
 }
+
 
 /*Separator */
 
@@ -582,53 +584,46 @@ p img.alignleft {
     .separator {
         margin: 40px auto;
         position: relative;
-        display:block;
+        display: block;
         width: 100%;
         height: 12px;
-        text-align:center;
-        opacity:.4;
+        text-align: center;
+        opacity: .4;
     }
-    .separator>div{
-        display:inline-block;
-       
+    .separator>div {
+        display: inline-block;
     }
     .separator>div:after,
-    .separator>div:before{
-        content:'';
-        display: block; 
+    .separator>div:before {
+        content: '';
+        display: block;
         position: relative;
         width: 9rem;
         height: 1px;
-        background-color:black;
-        top:.7rem;
-        
+        background-color: black;
+        top: .7rem;
     }
-    .separator>div:after{
-        left:6rem;
-        top:-.5rem;
+    .separator>div:after {
+        left: 6rem;
+        top: -.5rem;
     }
-
-    .separator>div:before{
-        left:-6rem;
-        top:.7rem;
-
+    .separator>div:before {
+        left: -6rem;
+        top: .7rem;
     }
-    .separator .icon-rombo{
-        width:12px;
-        height:12px;
-        display:inline-block;
-        fill:black;
-        
+    .separator .icon-rombo {
+        width: 12px;
+        height: 12px;
+        display: inline-block;
+        fill: black;
     }
-   
-    
 }
 
 .social-share {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
-    position:relative;
+    position: relative;
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -648,7 +643,8 @@ p img.alignleft {
     -webkit-clip-path: polygon(5% 0, 95% 0, 100% 15%, 100% 85%, 95% 100%, 5% 100%, 0 85%, 0 15%);
     clip-path: polygon(5% 0, 95% 0, 100% 15%, 100% 85%, 95% 100%, 5% 100%, 0 85%, 0 15%);
 }
-.social-share:after{
+
+.social-share:after {
     position: absolute;
     left: 15px;
     right: 15px;
@@ -658,8 +654,8 @@ p img.alignleft {
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
     z-index: 1;
-    border: 1px solid #555758;;
-    
+    border: 1px solid #555758;
+    ;
     -webkit-clip-path: polygon(5% 0, 95% 0, 100% 15%, 100% 85%, 95% 100%, 5% 100%, 0 85%, 0 15%);
     clip-path: polygon(5% 0, 95% 0, 100% 15%, 100% 85%, 95% 100%, 5% 100%, 0 85%, 0 15%);
 }
@@ -681,27 +677,29 @@ p img.alignleft {
     color: #b8babb;
     margin-bottom: 2rem;
 }
-.social-share a{
+
+.social-share a {
     transition: all .4s;
     transform: translateY(0);
-    z-index:2;
+    z-index: 2;
 }
+
 .social-share a svg[class*='icon'] {
     fill: #909396;
 }
 
-.social-share a:hover svg{
+.social-share a:hover svg {
     fill: #56bad3;
-    
 }
+
 .social-share a:hover {
     transform: translateY(-5px);
 }
+
 .social-share a svg[class*='icon'] {
     margin: 0 .5rem;
     width: 1.5em;
     height: 1.5em;
-    
 }
 
 
@@ -967,8 +965,8 @@ header .button-toggle {
     font-size: 1.2rem;
 }
 
-header .button-toggle svg{
-    font-size:2rem;
+header .button-toggle svg {
+    font-size: 2rem;
 }
 
 header .button-toggle:hover {
@@ -1087,10 +1085,11 @@ header .button-toggle:hover {
 .post .categories a {
     padding: 0 4px;
 }
-.post .categories svg{
-    fill:#39879a;
 
+.post .categories svg {
+    fill: #39879a;
 }
+
 .post .info {
     overflow: hidden;
     padding: 10px;
@@ -1101,9 +1100,10 @@ header .button-toggle:hover {
     vertical-align: middle;
 }
 
-.post .info .comments a svg{
-    fill:#39879a;
+.post .info .comments a svg {
+    fill: #39879a;
 }
+
 .post .more {
     text-align: center;
     margin-top: 3.125rem;
@@ -1174,7 +1174,7 @@ header .button-toggle:hover {
     font-size: 1.5rem;
     font-weight: 400;
     padding: 0;
-    margin-bottom:.6rem;
+    margin-bottom: .6rem;
     margin-top: 1.6rem;
 }
 
@@ -1680,7 +1680,7 @@ footer.site-footer p>* {
 }
 
 footer.site-footer .icon-chevron-up {
-        position: absolute;
+    position: absolute;
     padding: .2rem;
     width: 4rem;
     height: 2rem;
@@ -1840,7 +1840,6 @@ footer.site-footer .site-info {
         padding-bottom: 20px;
         border-bottom: 1px solid rgba(111, 108, 108, 0.28);
     }
-    
     .sidebar-widget h3.wid-title:before,
     .sidebar-widget h3.wid-title:after {
         content: '';
@@ -1871,7 +1870,6 @@ footer.site-footer .site-info {
         -ms-transform: translateX(-50%) rotate(-45deg);
         transform: translateX(-50%) rotate(-45deg);
     }
-    
 }
 
 
@@ -1891,20 +1889,21 @@ footer.site-footer .site-info {
     cursor: pointer;
 }
 
-@media screen and (min-width: 37.5rem){
+.pagination a:hover {
+    background-color: #253e444f;
+    color: white;
+}
+
+@media screen and (min-width: 37.5rem) {
     .pagination a,
     .pagination span {
         padding: 1rem;
-       
-    }
-    .pagination a:hover{
-        background-color: #253e444f;
-        color: white;
     }
 }
+
 .pagination .current {
-    background-color:#253e44;
-    color:white;
+    background-color: #253e44;
+    color: white;
 }
 
 
@@ -2138,12 +2137,14 @@ form.search input[type="submit"]:hover {
     border: 2px solid #253e44;
 }
 
+
 /* SVG */
+
 .icon {
-  display: inline-block;
-  width: 1em;
-  height: 1em;
-  stroke-width: 0;
-  stroke: currentColor;
-  fill: currentColor;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
 }

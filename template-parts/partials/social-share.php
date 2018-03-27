@@ -3,7 +3,8 @@
 ** social share template part.
 */
 
-if(get_theme_mod('developersite_show_social_share')):
+if(get_theme_mod('developersite_show_social_share',true)):
+    
 ?>
 <div class="social-share">
     <h4><?php  _e('Share on :','developersite'); ?></h4>
@@ -13,4 +14,4 @@ if(get_theme_mod('developersite_show_social_share')):
     <a href="http://pinterest.com/pin/create/button/?url=<?php the_permalink(); ?>&media=<?php $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) ); echo $url; ?>" target="_blank"><?php echo developersite_get_svg('pinterest-square');?></a>
     <a href="http://www.linkedin.com/shareArticle?mini=true&amp;title=<?php the_title(); ?>&amp;url=<?php the_permalink(); ?>" target="_blank"><?php echo developersite_get_svg('linkedin');?></a>
 </div>
-<?php endif; ?>
+<?php endif;?>
