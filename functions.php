@@ -310,7 +310,7 @@ function developersite_add_img_title( $attr, $attachment = null ) {
 \*------------------------------------*/
 
 // Add Actions
-add_action('wp_print_scripts', 'developersite_conditional_scripts'); // Add Conditional Page Scripts
+
 add_action('wp_enqueue_scripts', 'developersite_scripts'); // Add Theme Stylesheet
 add_action('widgets_init', 'developersite_widgets_init' );
 add_action('customize_preview_init', 'developersite_customizer_live_preview');

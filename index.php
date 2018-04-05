@@ -3,7 +3,7 @@
 	<main role="main">
 		<!-- section -->
 		
-		<section>
+		<section class="blog-section">
 			
 		<h1><?php echo esc_html(get_theme_mod('developersite_blog_title','Blog')); ?></h1>
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>

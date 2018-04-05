@@ -2,7 +2,7 @@
 	Theme Name: Developer&Site
 	Theme URI: 
 	Description: Personal Theme, focused on developers where they show their postafolio, blog and one about them. Site with serious and professional appearance, modifiable in colors and views.
-	Version: 1.5.2
+	Version: 1.5.1
 	Author: J.Rafael Simarro
 	Author URI: http://juanrafaelsimarro.com
 	Tags: left-sidebar, custom-colors, custom-menu, featured-images, theme-options, threaded-comments, translation-ready, blog
@@ -94,6 +94,7 @@ h4 {
 
 img {
     max-width: 100%;
+    height: auto;
     vertical-align: bottom;
 }
 
@@ -943,7 +944,7 @@ header .admin-content .site-title {
     color: #ffffff;
     font-weight: 100;
     font-size: 2rem;
-    margin-bottom: 1rem;
+    margin: 0 .4rem 1rem;
 }
 
 header .admin-content .site-description {
@@ -1587,28 +1588,44 @@ main section>h1 span {
     vertical-align: middle;
 }
 
-main section>h1:before {
+main section>h1:after {
     content: '';
-    width: 5rem;
+    width: 7rem;
     height: 3px;
     border-top: 3px double #27292B;
     position: absolute;
-    right: -4.3rem;
-    top: 2.1rem;
+    left: 50%;
+    transform: translateX(-50%);
     display: block;
-    z-index: -1;
+    position: relative;
+    margin-top: 1rem;
 }
 
-main section>h1:after {
-    content: '';
-    width: 5rem;
-    height: 3px;
-    border-top: 3px double #27292B;
-    position: relative;
-    left: -5.3rem;
-    top: -1.2rem;
-    display: block;
-    z-index: -1;
+@media screen and (min-width: 37.5rem) {
+    main section>h1:before {
+        content: '';
+        width: 5rem;
+        height: 3px;
+        border-top: 3px double #27292B;
+        position: absolute;
+        right: -4.3rem;
+        top: 2.1rem;
+        display: block;
+        z-index: -1;
+    }
+    main section>h1:after {
+        content: '';
+        width: 5rem;
+        height: 3px;
+        border-top: 3px double #27292B;
+        position: relative;
+        left: -5.3rem;
+        transform: translateX(0);
+        top: -1.2rem;
+        display: block;
+        margin-top: 0;
+        z-index: -1;
+    }
 }
 
 .page .image-post {
