@@ -52,9 +52,9 @@ $social[] = array(
 
 //Menu social customize
 $wp_customize->add_section( 'developersite_menu_social_section', array(
-    'title' => esc_html__( 'Social Red settings', 'developersite' ),
+    'title' => esc_html__( 'Social Network Settings', 'developersite' ),
     'priority' => 30,
-    'description' => esc_html__('Social Red settings', 'developersite'),
+    
   ));
 
   // Show social share
@@ -67,11 +67,11 @@ $wp_customize->add_section( 'developersite_menu_social_section', array(
 ));
 
 $wp_customize->add_control('developersite_show_social_share', array(
-    'label' => esc_html__( 'Show or Hide social share panel' ,'developersite'),
+    'label' => esc_html__( 'Show or Hide panel share social networks' ,'developersite'),
     'setting'  => 'developersite_show_social_share',
     'section' => 'developersite_menu_social_section',
     'priority'   => 1,
-    'description' => esc_html__( 'Show or Hide social share panel on pages and details posts' ,'developersite'),
+    'description' => esc_html__( 'Show or Hide panel share social networks on pages and details posts' ,'developersite'),
     'type' => 'checkbox',
     
 ));
