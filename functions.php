@@ -163,7 +163,7 @@ function developersite_customizer_live_preview()
 function developersite_scripts()
 {
 
-        wp_register_style('normalize', get_template_directory_uri() . '/assets/css/normalize.min.css', array(), '1.0', 'all');
+        wp_register_style('normalize', get_template_directory_uri() . '/assets/css/normalize.css', array(), '8.0', 'all');
         wp_enqueue_style('normalize'); // Enqueue it!
     
         wp_register_style('aos_css', get_template_directory_uri() . '/assets/css/aos.css', array(), '', 'all');
